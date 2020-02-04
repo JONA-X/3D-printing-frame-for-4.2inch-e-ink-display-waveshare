@@ -17,10 +17,10 @@ displayWidth = displayInnerWidth + 2 * displayInnerFrameLeftRight;
 displayHeight = displayInnerHeight + displayInnerFrameTop + displayInnerFrameBottom;
 displaySpiel = 0.4;
 
-echo("Total display size (including edges): ", displayWidth, " x ", displayHeight);
+echo(str("Total display size (including edges): ", displayWidth, " x ", displayHeight));
 
 displayPlateHeight = 3.5;
-displayTotalHeight = 9.5;
+//displayTotalHeight = 9.5;
 
 frameAdditionalSpace = 7.3; // Min. 5.5mm so that cables can be well folded at left side
 frameWallThickness = 1;
@@ -110,7 +110,7 @@ module frameCornerScrewHolder(){
     difference(){
         rotate(v = [0,0,1], a = 135) translate([-5*frameCornerCubeWidth, -frameCornerCubeWidth/2, 0]) cube([10*frameCornerCubeWidth, 10*frameCornerCubeWidth, frameCornerCubeHeight]);
         rotate(v=[0,0,1], a = 15) translate([0, 0, frameCornerCubeHeight-frameCornerScrewNutHeight]) cylinder(r = frameCornerScrewNutRadius, h = 50, $fn = 6);
-        translate([0, 0, -10]) cylinder(h = 50, r = frameCornerScrewHoleRadius, $fn = 50 + PRINTING_MODE * 150);
+        translate([0, 0, -10]) cylinder(h = 50, r = frameCornerScrewHoleRadius, $fn = 36);
         translate([10 * frameCornerCubeWidth,0,0]) rotate(v=[0,0,1], a = 180) translate([frameCornerCubeWidth/2, frameCornerCubeWidth/2, -2*frameCornerCubeHeight]) cube([20*frameCornerCubeWidth, 20*frameCornerCubeWidth, 4*frameCornerCubeHeight]);
         translate([0, 10 * frameCornerCubeWidth,0]) rotate(v=[0,0,1], a = 180) translate([frameCornerCubeWidth/2, frameCornerCubeWidth/2, -2*frameCornerCubeHeight]) cube([20*frameCornerCubeWidth, 20*frameCornerCubeWidth, 4*frameCornerCubeHeight]);
     }
@@ -178,6 +178,9 @@ rotate(v = [1,0,0], a = 90 * PRINTING_MODE) rotate(v = [0,0,1], a = 90 * PRINTIN
 
 translate([x2_offset, y2_offset, z_offset]) rotate(v = [1,0,0], a = 90 * PRINTING_MODE) rotate(v = [0,0,1], a = 90 * PRINTING_MODE) frameDisplayFixationFrameStructure();
 
+
+
+
     //////////////////////////////////////////////////////////////////////
    //                                                                  //
   //                         COVER PLATE                              //
@@ -187,11 +190,11 @@ translate([x2_offset, y2_offset, z_offset]) rotate(v = [1,0,0], a = 90 * PRINTIN
 
 
 module frameCornerScrewHole(){
-    translate([0, 0, -10]) cylinder(h = 50, r = frameCornerScrewHoleRadius, $fn = 50 + PRINTING_MODE * 200);
+    translate([0, 0, -10]) cylinder(h = 50, r = frameCornerScrewHoleRadius, $fn = 36);
 }
 
 module frameCornerScrewHoleScrew(){
-    translate([0, 0, 0]) cylinder(h = 50, r = frameCornerScrewIndentationRadius, $fn = 50 + PRINTING_MODE * 200, center = false);
+    translate([0, 0, 0]) cylinder(h = 50, r = frameCornerScrewIndentationRadius, $fn = 36, center = false);
 }
 
 
@@ -204,7 +207,7 @@ translate([0, PRINTING_MODE * ( -110 ), PRINTING_MODE * -(frameWallThickness + d
         difference(){
             cube([frameTotalWidth - 2 * frameWallThickness -2 * frameCoverPlateTolerance, frameTotalHeight - 2 * frameWallThickness - 2 * frameCoverPlateTolerance, frameCoverPlateThickness]);
             
-            translate([(frameTotalWidth - 2 * frameWallThickness -2 * frameCoverPlateTolerance)/2,0,0]) cylinder(r = frameCoverPlateHoleCableRadius, h = 20, $fn = 50 + PRINTING_MODE * 200, center = true); // Cylinder for the slot where a cable can go out
+            translate([(frameTotalWidth - 2 * frameWallThickness -2 * frameCoverPlateTolerance)/2,0,0]) cylinder(r = frameCoverPlateHoleCableRadius, h = 20, $fn = 36, center = true); // Cylinder for the slot where a cable can go out
         }
     
         
@@ -221,5 +224,4 @@ translate([0, PRINTING_MODE * ( -110 ), PRINTING_MODE * -(frameWallThickness + d
             }
         }
     }
-    
 }
