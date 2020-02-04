@@ -1,4 +1,4 @@
-# 3D-printing-frame-for-4.2inch-e-ink-display-waveshare
+# 3D printed frame for a 4.2" e-ink display by Waveshare
 
 This is a frame for a 4.2" e-Ink display by Waveshare. The display can be put easily in the indentation in the frame. Only the real part of the display (the pixels you can change) will be visible trough the front of the frame. 
 
