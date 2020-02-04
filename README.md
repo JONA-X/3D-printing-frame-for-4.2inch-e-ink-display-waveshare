@@ -10,9 +10,9 @@ The cover plate has a hole for a power supply cable which can go out of the fram
 
 ### External links
 
-The black/white e-ink display I used can be found [at Amazon](https://www.amazon.com/dp/B07VBW1LHF/) or [at ebay](https://www.ebay.de/itm/254105830608).
+The black/white e-ink display I used can be found [at Amazon](https://www.amazon.com/dp/B07VBW1LHF/) or [at ebay](https://www.ebay.com/itm/254105830608).
 
-The same display with a third colour (red) can be found [here at ebay](https://www.ebay.de/itm/254320212310).
+The same display with a third colour (red) can be found [here at ebay](https://www.ebay.com/itm/254320212310).
 
 
 
